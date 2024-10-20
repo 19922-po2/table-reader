@@ -1,0 +1,19 @@
+<div>
+  <!-- <hot-table [hotId]="tableid" [settings]="hotSettings">
+    <hot-column data="id" [readOnly]="true" title="ID"></hot-column>
+    <hot-column data="country" title="Country"></hot-column>
+    <hot-column data="city" title="City"></hot-column>
+  </hot-table> -->
+  <div id="tableid" class="hot handsontable htRowHeaders htColumnHeaders"></div>
+
+  <br />
+  <button style="margin-right: 2%" (click)="addRow()">Add Row</button>
+
+  <button style="margin-right: 2%" (click)="printData()">Print Data</button>
+
+  <button style="margin-right: 2%" (click)="downloadExcell()">Download</button>
+
+  <input type="file" (change)="onFileChange($event)" multiple="false" />
+
+  <p *ngIf="error">{{ error }}</p>
+</div>
